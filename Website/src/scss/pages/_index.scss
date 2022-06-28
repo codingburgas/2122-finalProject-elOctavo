@@ -1,0 +1,758 @@
+@use '../util/_utilForward.scss' as *;
+@use '../global/_globalForward.scss' as *;
+
+.home__section {
+    width: 100%;
+}
+
+.home__title-wrapper {
+    width: 100%;
+    height: 500px;
+    background-color: $accentLightColor;
+    @include flex(row, center, center);
+}
+
+.home__title {
+    font-size: $hugeFontSize;
+    letter-spacing: $normalLetterSpacing;
+}
+
+.home__play-now-wrapper {
+    width: 100%;
+    height: 100px;
+    @include flex(tow, center, center);
+    background-color: $mainDarkColor;
+    cursor: pointer;
+}
+
+.home__play-now-text {
+    font-size: $normalFontSize + 5;
+    letter-spacing: $normalLetterSpacing;
+    color: white;
+}
+
+.feature__section {
+    @include flex(column, flex-start, center);
+    width: 100%;
+}
+
+.feature__title {
+    font-size: $hugeFontSize;
+    letter-spacing: $smallLetterSpacing;
+}
+
+.mechanics {
+    width: 100%;
+    height: 500px;
+    @include flex(row, space-evenly, center);
+}
+
+.mechanics__text-wrapper {
+    width: 600px;
+    height: 400px;
+    @include flex(column, flex-start, flex-start);
+}
+
+.mechanics__title {
+    font-size: $bigFontSize;
+    letter-spacing: $smallLetterSpacing + 0.03;
+}
+
+.mechanics__text {
+    font-size: $normalFontSize;
+    letter-spacing: $smallLetterSpacing + 0.03;
+    width: 580px;
+    line-height: 2;
+}
+
+.mechanics__image-wrapper {
+    width: 600px;
+    height: 400px;
+    @include flex(column, flex-start, flex-start);
+    border-top-style: solid;
+    border-top-width: 5px;
+    border-top-color: $accentDarkColor;
+    background-color: #D9D9D9;
+    background-image: url('../images/story.png');
+    background-size: cover;
+}
+
+.storytelling {
+    width: 100%;
+    height: 500px;
+    @include flex(row-reverse, space-evenly, center);
+}
+
+.storytelling__text-wrapper {
+    width: 600px;
+    height: 400px;
+    @include flex(column, flex-start, flex-start);
+}
+
+.storytelling__title {
+    font-size: $bigFontSize;
+    letter-spacing: $smallLetterSpacing + 0.03;
+}
+
+.storytelling__text {
+    font-size: $normalFontSize;
+    letter-spacing: $smallLetterSpacing + 0.03;
+    width: 580px;
+    line-height: 2;
+}
+
+.storytelling__image-wrapper {
+    width: 600px;
+    height: 400px;
+    @include flex(column, flex-start, flex-start);
+    border-top-style: solid;
+    border-top-width: 5px;
+    border-top-color: $accentDarkColor;
+    background-color: #D9D9D9;
+    background-image: url('../images/mechanic.png');
+    background-size: cover;
+}
+
+.news__section {
+    width: 100%;
+    height: 500px;
+    @include flex(row, center, center);
+}
+
+.news__wrapper {
+    width: 1280px;
+    height: 362px;
+    @include flex(column, space-evenly, center);
+    background-color: $mainLightColor;
+    border-radius: 20px;
+}
+
+.news__heading {
+    font-size: $normalFontSize + 13;
+    letter-spacing: $smallLetterSpacing;
+    color: white;
+}
+
+.news__subscribe-button {
+    width: 350px;
+    height: 90px;
+    @include flex(row, center, center);
+    background-color: $mainDarkColor;
+    border-radius: 20px;
+}
+
+.news__subscribe-text {
+    font-size: $normalFontSize;
+    letter-spacing: $smallLetterSpacing;
+    color: white;
+}
+
+
+//Responsive from 1920px to 1201px
+@media only screen and (max-width:1300px) {
+    .feature__section {
+        @include flex(column, flex-start, center);
+        width: 100%;
+    }
+
+    .feature__title {
+        font-size: $hugeFontSize;
+        letter-spacing: $smallLetterSpacing;
+    }
+
+    .mechanics {
+        width: 100%;
+        height: 500px;
+        @include flex(row, space-evenly, center);
+    }
+
+    .mechanics__text-wrapper {
+        width: 500px;
+        height: 400px;
+        @include flex(column, flex-start, flex-start);
+    }
+
+    .mechanics__title {
+        font-size: $bigFontSize;
+        letter-spacing: $smallLetterSpacing + 0.03;
+    }
+
+    .mechanics__text {
+        font-size: $normalFontSize;
+        letter-spacing: $smallLetterSpacing + 0.03;
+        width: 100%;
+        line-height: 2;
+    }
+
+    .mechanics__image-wrapper {
+        width: 550px;
+        height: 380px;
+        @include flex(column, flex-start, flex-start);
+        border-top-style: solid;
+        border-top-width: 5px;
+        border-top-color: $accentDarkColor;
+        background-color: #D9D9D9;
+    }
+
+    .storytelling {
+        width: 100%;
+        height: 500px;
+        @include flex(row-reverse, space-evenly, center);
+    }
+
+    .storytelling__text-wrapper {
+        width: 500px;
+        height: 400px;
+        @include flex(column, flex-start, flex-start);
+    }
+
+    .storytelling__title {
+        font-size: $bigFontSize;
+        letter-spacing: $smallLetterSpacing + 0.03;
+    }
+
+    .storytelling__text {
+        font-size: $normalFontSize;
+        letter-spacing: $smallLetterSpacing + 0.03;
+        width: 100%;
+        line-height: 2;
+    }
+
+    .storytelling__image-wrapper {
+        width: 550px;
+        height: 380px;
+        @include flex(column, flex-start, flex-start);
+        border-top-style: solid;
+        border-top-width: 5px;
+        border-top-color: $accentDarkColor;
+        background-color: #D9D9D9;
+    }
+
+    .news__section {
+        width: 100%;
+        height: 500px;
+        @include flex(row, center, center);
+    }
+
+    .news__wrapper {
+        width: 90%;
+        height: 362px;
+        @include flex(column, space-evenly, center);
+        background-color: $mainLightColor;
+        border-radius: 20px;
+        text-align: center;
+    }
+
+    .news__heading {
+        font-size: $normalFontSize + 13;
+        letter-spacing: $smallLetterSpacing;
+        color: white;
+        width: 90%;
+    }
+
+    .news__subscribe-button {
+        width: 350px;
+        height: 90px;
+        @include flex(row, center, center);
+        background-color: $mainDarkColor;
+        border-radius: 20px;
+    }
+
+    .news__subscribe-text {
+        font-size: $normalFontSize;
+        letter-spacing: $smallLetterSpacing;
+        color: white;
+    }
+}
+
+//Responsive from 1200px to 993px
+@media only screen and (max-width:1200px) {
+    .home__section {
+        width: 100%;
+    }
+
+    .home__title-wrapper {
+        width: 100%;
+        height: 400px;
+        background-color: $accentLightColor;
+        @include flex(row, center, center);
+    }
+
+    .home__title {
+        font-size: $hugeFontSize - 5;
+        letter-spacing: $normalLetterSpacing;
+    }
+
+    .home__play-now-wrapper {
+        width: 100%;
+        height: 100px;
+        @include flex(tow, center, center);
+        background-color: $mainDarkColor;
+        cursor: pointer;
+    }
+
+    .home__play-now-text {
+        font-size: $normalFontSize + 3;
+        letter-spacing: $normalLetterSpacing;
+        color: white;
+    }
+
+    .feature__section {
+        @include flex(column, flex-start, center);
+        width: 100%;
+    }
+
+    .feature__title {
+        font-size: $hugeFontSize - 5;
+        letter-spacing: $smallLetterSpacing;
+    }
+
+    .mechanics {
+        width: 100%;
+        height: 700px;
+        @include flex(column-reverse, center, center);
+        margin-bottom: 30px;
+    }
+
+    .mechanics__text-wrapper {
+        width: 600px;
+        height: 400px;
+        @include flex(column, flex-start, center);
+        text-align: center;
+    }
+
+    .mechanics__title {
+        font-size: $bigFontSize;
+        letter-spacing: $smallLetterSpacing + 0.03;
+    }
+
+    .mechanics__text {
+        font-size: $normalFontSize;
+        letter-spacing: $smallLetterSpacing + 0.03;
+        width: 580px;
+        line-height: 2;
+    }
+
+    .mechanics__image-wrapper {
+        width: 600px;
+        height: 400px;
+        @include flex(column, flex-start, flex-start);
+        border-top-style: solid;
+        border-top-width: 5px;
+        border-top-color: $accentDarkColor;
+        background-color: #D9D9D9;
+    }
+
+    .storytelling {
+        width: 100%;
+        height: 700px;
+        @include flex(column-reverse, center, center);
+        margin-top: 30px;
+    }
+
+    .storytelling__text-wrapper {
+        width: 600px;
+        height: 400px;
+        @include flex(column, flex-start, center);
+        text-align: center;
+    }
+
+    .storytelling__title {
+        font-size: $bigFontSize;
+        letter-spacing: $smallLetterSpacing + 0.03;
+    }
+
+    .storytelling__text {
+        font-size: $normalFontSize;
+        letter-spacing: $smallLetterSpacing + 0.03;
+        width: 580px;
+        line-height: 2;
+    }
+
+    .storytelling__image-wrapper {
+        width: 600px;
+        height: 400px;
+        @include flex(column, flex-start, flex-start);
+        border-top-style: solid;
+        border-top-width: 5px;
+        border-top-color: $accentDarkColor;
+        background-color: #D9D9D9;
+    }
+}
+
+//Responsive from 992px to 768px
+@media only screen and (max-width:992px) {
+    .home__section {
+        width: 100%;
+    }
+
+    .home__title-wrapper {
+        text-align: center;
+        width: 100%;
+        height: 350px;
+        background-color: $accentLightColor;
+        @include flex(row, center, center);
+    }
+
+    .home__title {
+        font-size: $hugeFontSize - 15;
+        letter-spacing: $normalLetterSpacing;
+    }
+
+    .home__play-now-wrapper {
+        width: 100%;
+        height: 100px;
+        @include flex(tow, center, center);
+        background-color: $mainDarkColor;
+        cursor: pointer;
+    }
+
+    .home__play-now-text {
+        font-size: $normalFontSize;
+        letter-spacing: $normalLetterSpacing;
+        color: white;
+    }
+
+    .news__section {
+        width: 100%;
+        height: 320px;
+        @include flex(row, center, center);
+    }
+
+    .news__wrapper {
+        width: 90%;
+        height: 300px;
+        @include flex(column, space-evenly, center);
+        background-color: $mainLightColor;
+        border-radius: 20px;
+        text-align: center;
+    }
+
+    .news__heading {
+        font-size: $normalFontSize + 7;
+        letter-spacing: $smallLetterSpacing;
+        color: white;
+        width: 90%;
+    }
+
+    .news__subscribe-button {
+        width: 300px;
+        height: 70px;
+        @include flex(row, center, center);
+        background-color: $mainDarkColor;
+        border-radius: 20px;
+    }
+
+    .news__subscribe-text {
+        font-size: $normalFontSize;
+        letter-spacing: $smallLetterSpacing;
+        color: white;
+    }
+
+   
+}
+
+//Responsive from 767px to 576px
+@media only screen and (max-width:767px) {
+    .home__section {
+        width: 100%;
+    }
+
+    .home__title-wrapper {
+        text-align: center;
+        width: 100%;
+        height: 300px;
+        background-color: $accentLightColor;
+        @include flex(row, center, center);
+    }
+
+    .home__title {
+        font-size: $hugeFontSize - 30;
+        letter-spacing: $normalLetterSpacing;
+    }
+
+    .home__play-now-wrapper {
+        width: 100%;
+        height: 80px;
+        @include flex(tow, center, center);
+        background-color: $mainDarkColor;
+        cursor: pointer;
+    }
+
+    .home__play-now-text {
+        font-size: $normalFontSize - 3;
+        letter-spacing: $normalLetterSpacing;
+        color: white;
+    }
+
+    .feature__section {
+        @include flex(column, flex-start, center);
+        width: 100%;
+    }
+
+    .feature__title {
+        font-size: $hugeFontSize - 15;
+        letter-spacing: $smallLetterSpacing;
+    }
+
+    .mechanics {
+        width: 100%;
+        height: 100%;
+        @include flex(column-reverse, center, center);
+        margin-bottom: 10px;
+    }
+
+    .mechanics__text-wrapper {
+        width: 90%;
+        height: 400px;
+        @include flex(column, flex-start, center);
+        text-align: center;
+    }
+
+    .mechanics__title {
+        font-size: $bigFontSize;
+        letter-spacing: $smallLetterSpacing + 0.03;
+    }
+
+    .mechanics__text {
+        font-size: $normalFontSize;
+        letter-spacing: $smallLetterSpacing + 0.03;
+        width: 500px;
+        line-height: 2;
+    }
+
+    .mechanics__image-wrapper {
+        width: 500px;
+        height: 350px;
+        @include flex(column, flex-start, flex-start);
+        border-top-style: solid;
+        border-top-width: 5px;
+        border-top-color: $accentDarkColor;
+        background-color: #D9D9D9;
+    }
+
+    .storytelling {
+        width: 100%;
+        height: 700px;
+        @include flex(column-reverse, center, center);
+        margin-top: 10px;
+    }
+
+    .storytelling__text-wrapper {
+        width: 90%;
+        height: 400px;
+        @include flex(column, flex-start, center);
+        text-align: center;
+    }
+
+    .storytelling__title {
+        font-size: $bigFontSize;
+        letter-spacing: $smallLetterSpacing + 0.03;
+    }
+
+    .storytelling__text {
+        font-size: $normalFontSize;
+        letter-spacing: $smallLetterSpacing + 0.03;
+        width: 500px;
+        line-height: 2;
+    }
+
+    .storytelling__image-wrapper {
+        width: 500px;
+        height: 350px;
+        @include flex(column, flex-start, flex-start);
+        border-top-style: solid;
+        border-top-width: 5px;
+        border-top-color: $accentDarkColor;
+        background-color: #D9D9D9;
+    }
+
+    .news__section {
+        width: 100%;
+        height: 270px;
+        @include flex(row, center, center);
+    }
+
+    .news__wrapper {
+        width: 90%;
+        height: 250px;
+        @include flex(column, space-evenly, center);
+        background-color: $mainLightColor;
+        border-radius: 20px;
+        text-align: center;
+    }
+
+    .news__heading {
+        font-size: $normalFontSize ;
+        letter-spacing: $smallLetterSpacing;
+        color: white;
+        width: 90%;
+    }
+
+    .news__subscribe-button {
+        width: 250px;
+        height: 60px;
+        @include flex(row, center, center);
+        background-color: $mainDarkColor;
+        border-radius: 20px;
+    }
+
+    .news__subscribe-text {
+        font-size: $normalFontSize;
+        letter-spacing: $smallLetterSpacing;
+        color: white;
+    }
+
+}
+
+//Responsive to 575px 
+@media only screen and (max-width:575px) {
+    .home__section {
+        width: 100%;
+    }
+
+    .home__title-wrapper {
+        text-align: center;
+        width: 100%;
+        height: 250px;
+        background-color: $accentLightColor;
+        @include flex(row, center, center);
+    }
+
+    .home__title {
+        font-size: $hugeFontSize - 35;
+        letter-spacing: $normalLetterSpacing;
+    }
+
+    .home__play-now-wrapper {
+        width: 100%;
+        height: 70px;
+        @include flex(tow, center, center);
+        background-color: $mainDarkColor;
+        cursor: pointer;
+    }
+
+    .home__play-now-text {
+        font-size: $normalFontSize - 6;
+        letter-spacing: $normalLetterSpacing;
+        color: white;
+    }
+
+    .feature__section {
+        @include flex(column, flex-start, center);
+        width: 100%;
+    }
+
+    .feature__title {
+        font-size: $hugeFontSize - 20;
+        letter-spacing: $smallLetterSpacing;
+    }
+
+    .mechanics {
+        width: 100%;
+        height: unset;
+        @include flex(column-reverse, center, center);
+        margin-bottom: 0px;
+    }
+
+    .mechanics__text-wrapper {
+        width: 90%;
+        height: 340px;
+        @include flex(column, flex-start, center);
+        text-align: center;
+    }
+
+    .mechanics__title {
+        font-size: $bigFontSize - 5;
+        letter-spacing: $smallLetterSpacing + 0.03;
+    }
+
+    .mechanics__text {
+        font-size: $normalFontSize - 3;
+        letter-spacing: $smallLetterSpacing + 0.03;
+        width: 90%;
+        line-height: 2;
+    }
+
+    .mechanics__image-wrapper {
+        width: 90%;
+        height: 300px;
+        @include flex(column, flex-start, flex-start);
+        border-top-style: solid;
+        border-top-width: 5px;
+        border-top-color: $accentDarkColor;
+        background-color: #D9D9D9;
+    }
+
+    .storytelling {
+        width: 100%;
+        height: unset;
+        @include flex(column-reverse, center, center);
+        margin-top: 0px;
+    }
+
+    .storytelling__text-wrapper {
+        width: 90%;
+        height: 340px;
+        @include flex(column, flex-start, center);
+        text-align: center;
+    }
+
+    .storytelling__title {
+        font-size: $bigFontSize - 5;
+        letter-spacing: $smallLetterSpacing + 0.03;
+    }
+
+    .storytelling__text {
+        font-size: $normalFontSize - 3;
+        letter-spacing: $smallLetterSpacing + 0.03;
+        width: 90%;
+        line-height: 2;
+    }
+
+    .storytelling__image-wrapper {
+        width: 90%;
+        height: 300px;
+        @include flex(column, flex-start, flex-start);
+        border-top-style: solid;
+        border-top-width: 5px;
+        border-top-color: $accentDarkColor;
+        background-color: #D9D9D9;
+    }
+
+    .news__section {
+        width: 100%;
+        height: 250px;
+        @include flex(row, center, center);
+    }
+
+    .news__wrapper {
+        width: 90%;
+        height: 230px;
+        @include flex(column, space-evenly, center);
+        background-color: $mainLightColor;
+        border-radius: 20px;
+        text-align: center;
+    }
+
+    .news__heading {
+        font-size: $normalFontSize - 4;
+        letter-spacing: $smallLetterSpacing;
+        color: white;
+        width: 90%;
+    }
+
+    .news__subscribe-button {
+        width: 220px;
+        height: 55px;
+        @include flex(row, center, center);
+        background-color: $mainDarkColor;
+        border-radius: 20px;
+    }
+
+    .news__subscribe-text {
+        font-size: $normalFontSize - 3;
+        letter-spacing: $smallLetterSpacing;
+        color: white;
+    }
+}

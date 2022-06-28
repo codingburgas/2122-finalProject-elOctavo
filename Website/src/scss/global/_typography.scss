@@ -1,0 +1,16 @@
+@use '../util/_utilForward.scss' as *;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+    font-family: $headerFontFamily;
+    color:$textColor;
+
+}
+a, p, label, input{
+    font-family: $textFontFamily;
+    text-decoration: none;
+    color:$textColor;
+}

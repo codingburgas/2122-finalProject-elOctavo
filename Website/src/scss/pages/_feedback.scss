@@ -1,0 +1,198 @@
+@use '../util/_utilForward.scss' as *;
+@use '../global/_globalForward.scss' as *;
+
+.form__section{
+    width:100%;
+    height:800px;
+    @include flex(row, center,center);
+}
+.form__feedback{
+    width:750px;
+    height:700px;
+    @include flex(column, space-evenly, center);
+    padding-left:100px;
+    padding-right:100px;
+    box-shadow: 2px 2px 20px
+    rgba(0, 0, 0, 0.25);
+
+        input:focus + .input-label{
+            transform: translate(-10px, -1em);
+            font-size:$normalFontSize - 5;
+            letter-spacing: $smallLetterSpacing;
+        }
+}
+.form__heading-wrapper{
+    width:100%;
+    height:160px;
+    @include flex(row, flex-start, center);
+    text-align: left;
+}
+.form__heading{
+    font-size: $hugeFontSize;
+    letter-spacing: $smallLetterSpacing;
+}
+.input-and-label-wrapper{
+    @include flex(row, null, null);
+    position: relative;
+    width:100%;
+    height:70px;
+}
+input{
+    border:none;
+    background-color: transparent;
+    border-bottom-style: solid;
+    border-bottom-color: $formBorderColor;
+    border-bottom-width: 2px;
+    line-height: 27px;
+    width:100%;
+    height: 50px;
+    outline:none;
+    font-size: $normalFontSize;
+    letter-spacing: $smallLetterSpacing;
+   
+
+        &:not(:placeholder-shown) + .input-label{
+            transform: translate(-10px, -1em);
+            font-size: $normalFontSize - 5;
+            letter-spacing:  $smallLetterSpacing;
+        }      
+}
+.input-label{
+    position: absolute;
+    left:0.5em;
+    z-index: 2;
+    font-size:$normalFontSize;
+    letter-spacing: $smallLetterSpacing;
+    transition: 0.3s;
+    transform: translate(0px, 0em);
+    color:$formBorderColor;
+}
+input:focus{
+    outline:none;
+    font-size: $normalFontSize;
+    letter-spacing: $smallLetterSpacing;
+    color:var(--primaryTCWM);
+}
+.form__submit-button{
+    width:500px;
+    height:79px;
+    border-style: solid;
+    border-width: 4px;
+    background-color: transparent;
+    border-radius: 20px;
+    cursor: pointer;
+    font-family: $textFontFamily;
+    font-size: $normalFontSize + 5;
+    letter-spacing: $normalLetterSpacing;
+    border-color: $accentLightColor;
+}
+.textarea{
+    width:100%;
+    height:220px;
+    border:none;
+    outline:none;
+    font-size: $normalFontSize;
+    background-color: transparent;
+    font-family: $textFontFamily;
+    resize: none;
+    overflow: hidden;
+    padding-left: 1rem;
+    border-style: solid;
+    border-color: $formBorderColor;
+    border-width: 3px;
+}
+
+//Responsive from 992px to 768px
+@media  only screen and (max-width:850px){
+    .form__feedback{
+        width:700px;
+        height:700px;
+        @include flex(column, space-evenly, center);
+        padding-left:100px;
+        padding-right:100px;
+        box-shadow: 2px 2px 20px
+        rgba(0, 0, 0, 0.25);
+    
+            input:focus + .input-label{
+                transform: translate(-10px, -1em);
+                font-size:$normalFontSize - 5;
+                letter-spacing: $smallLetterSpacing;
+            }
+    }
+}
+
+//Responsive from 767px to 576px
+@media  only screen and (max-width:767px){
+    .form__feedback{
+        width:90%;
+        height:700px;
+        @include flex(column, space-evenly, center);
+        padding-left:70px;
+        padding-right:70px;
+        box-shadow: 2px 2px 20px
+        rgba(0, 0, 0, 0.25);
+        text-align: center;
+    
+            input:focus + .input-label{
+                transform: translate(-10px, -1em);
+                font-size:$normalFontSize - 5;
+                letter-spacing: $smallLetterSpacing;
+            }
+    }
+    .form__submit-button{
+        width:90%;
+        height:79px;
+        border-style: solid;
+        border-width: 4px;
+        background-color: transparent;
+        border-radius: 20px;
+        cursor: pointer;
+        font-family: $textFontFamily;
+        font-size: $normalFontSize + 5;
+        letter-spacing: $normalLetterSpacing;
+        border-color: $accentLightColor;
+    }
+}
+
+//Responsive to 575px 
+@media  only screen and (max-width:575px){
+    .form__feedback{
+        width:90%;
+        height:700px;
+        @include flex(column, space-evenly, center);
+        padding-left:40px;
+        padding-right:40px;
+        box-shadow: 2px 2px 20px
+        rgba(0, 0, 0, 0.25);
+        text-align: center;
+    
+            input:focus + .input-label{
+                transform: translate(-10px, -1em);
+                font-size:$normalFontSize - 5;
+                letter-spacing: $smallLetterSpacing;
+            }
+    }
+    .form__heading-wrapper{
+        width:100%;
+        height:120px;
+        @include flex(row, center, center);
+        text-align: left;
+    }
+    .form__heading{
+        font-size: $hugeFontSize - 10;
+        letter-spacing: $smallLetterSpacing;
+    }
+    .form__submit-button{
+        width:90%;
+        height:59px;
+        border-style: solid;
+        border-width: 4px;
+        background-color: transparent;
+        border-radius: 20px;
+        cursor: pointer;
+        font-family: $textFontFamily;
+        font-size: $normalFontSize ;
+        letter-spacing: $normalLetterSpacing;
+        border-color: $accentLightColor;
+    }
+}

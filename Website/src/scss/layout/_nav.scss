@@ -1,0 +1,77 @@
+@use '../util/_utilForward.scss' as *;
+@use '../global/_globalForward.scss' as *;
+
+.nav{
+    width:100%;
+    height:79px;
+    background-color: $accentDarkColor;
+    @include flex(row, center, center);
+}
+.nav__links-wrapper{
+    width:600px;
+    height:100%;
+    @include flex(row, space-around, center);
+}
+.nav__list{
+    @include flex(row, space-around, center);
+    width:100%;
+    height:100%;
+    list-style: none;
+}
+.nav__links{
+    color:white;
+    font-size: $normalFontSize;
+    letter-spacing: $normalLetterSpacing ;
+}
+
+//Responsive from 767px to 576px
+@media  only screen and (max-width:767px){
+    .nav{
+        width:100%;
+        height:79px;
+        background-color: $accentDarkColor;
+        @include flex(row, center, center);
+    }
+    .nav__links-wrapper{
+        width:450px;
+        height:100%;
+        @include flex(row, space-around, center);
+    }
+    .nav__list{
+        @include flex(row, space-around, center);
+        width:100%;
+        height:100%;
+        list-style: none;
+    }
+    .nav__links{
+        color:white;
+        font-size: $normalFontSize - 5;
+        letter-spacing: $normalLetterSpacing ;
+    }
+}
+
+//Responsive to 575px 
+@media  only screen and (max-width:575px){
+    .nav{
+        width:100%;
+        height:79px;
+        background-color: $accentDarkColor;
+        @include flex(row, space-around, center);
+    }
+    .nav__links-wrapper{
+        width:100%;
+        height:100%;
+        @include flex(row, space-around, center);
+    }
+    .nav__list{
+        @include flex(row, center, center);
+        width:100%;
+        height:100%;
+        list-style: none;
+    }
+    .nav__links{
+        color:white;
+        font-size: $normalFontSize - 5;
+        letter-spacing: $normalLetterSpacing ;
+    }
+}

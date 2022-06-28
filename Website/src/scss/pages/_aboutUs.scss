@@ -1,0 +1,349 @@
+@use '../util/_utilForward.scss' as *;
+@use '../global/_globalForward.scss' as *;
+
+.page-title{
+    font-size: $hugeFontSize;
+    text-align: center;
+    margin-top: 80px;
+    margin-bottom: 40px;
+}
+
+.team{
+    width:100%;
+    height:500px;
+    @include flex(row, space-evenly, center);
+}
+.team__text-wrapper{
+    width:600px;
+    height:400px;
+    @include flex(column, flex-start, flex-start);
+}
+.team__title{
+    font-size:$bigFontSize;
+    letter-spacing: $smallLetterSpacing + 0.03;
+}
+.team__text{
+    font-size:$normalFontSize;
+    letter-spacing: $smallLetterSpacing + 0.03;
+    width:580px;
+    line-height:2;
+}
+.team__image-wrapper{
+    width:600px;
+    height:400px;
+    @include flex(column, flex-start, flex-start);
+
+    background-color: transparent   ;
+    background-image: url('../images/game_logo.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+.website{
+    width:100%;
+    height:500px;
+    @include flex(row-reverse, space-evenly, center);
+}
+.website__text-wrapper{
+    width:600px;
+    height:400px;
+    @include flex(column, flex-start, flex-start);
+}
+.website__title{
+    font-size:$bigFontSize;
+    letter-spacing: $smallLetterSpacing + 0.03;
+}
+.website__text{
+    font-size:$normalFontSize;
+    letter-spacing: $smallLetterSpacing + 0.03;
+    width:580px;
+    line-height:2;
+}
+.website__image-wrapper{
+    width:600px;
+    height:400px;
+    @include flex(column, flex-start, flex-start);
+    border-top-style: solid;
+    border-top-width: 5px;
+    border-top-color: $accentDarkColor;
+    background-color: #D9D9D9;
+    background-image: url('../images/website_img.png');
+    background-size: 100% 100%; 
+    background-repeat: no-repeat;
+}
+
+//Responsive from 1920px to 1201px
+@media  only screen and (max-width:1300px){
+    .team{
+        width:100%;
+        height:500px;
+        @include flex(row, space-evenly, center);
+    }
+    .team__text-wrapper{
+        width:500px;
+        height:400px;
+        @include flex(column, flex-start, flex-start);
+    }
+    .team__title{
+        font-size:$bigFontSize;
+        letter-spacing: $smallLetterSpacing + 0.03;
+    }
+    .team__text{
+        font-size:$normalFontSize;
+        letter-spacing: $smallLetterSpacing + 0.03;
+        width:100%;
+        line-height:2;
+    }
+    .team__image-wrapper{
+        width:550px;
+        height:380px;
+        @include flex(column, flex-start, flex-start);
+     
+        background-image: url('../images/game_logo.png');
+    background-size: 100% 100%;
+        background-repeat: no-repeat;
+    }
+    
+    .website{
+        width:100%;
+        height:500px;
+        @include flex(row-reverse, space-evenly, center);
+    }
+    .website__text-wrapper{
+        width:500px;
+        height:400px;
+        @include flex(column, flex-start, flex-start);
+    }
+    .website__title{
+        font-size:$bigFontSize;
+        letter-spacing: $smallLetterSpacing + 0.03;
+    }
+    .website__text{
+        font-size:$normalFontSize;
+        letter-spacing: $smallLetterSpacing + 0.03;
+        width:100%;
+        line-height:2;
+    }
+    .website__image-wrapper{
+        width:550px;
+        height:380px;
+        @include flex(column, flex-start, flex-start);
+        border-top-style: solid;
+        border-top-width: 5px;
+        border-top-color: $accentDarkColor;
+        background-color: #D9D9D9;
+        background-image: url('../images/website_img.png');
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+    }
+}
+
+//Responsive from 1200px to 993px
+@media  only screen and (max-width:1200px){
+    .team{
+        width:100%;
+        height:unset;
+        @include flex(column, center, center);
+        margin-bottom: 30px;
+    }
+    .team__text-wrapper{
+        width:500px;
+        height:400px;
+        @include flex(column, flex-start, center);
+        text-align: center;
+    }
+    .team__title{
+        font-size:$bigFontSize;
+        letter-spacing: $smallLetterSpacing + 0.03;
+    }
+    .team__text{
+        font-size:$normalFontSize;
+        letter-spacing: $smallLetterSpacing + 0.03;
+        width:100%;
+        line-height:2;
+    }
+    .team__image-wrapper{
+        width:550px;
+        height:380px;
+        @include flex(column, flex-start, flex-start);
+        background-image: url('../images/game_logo.png');
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+    }
+    
+    .website{
+        width:100%;
+        height:unset;
+        @include flex(column, space-evenly, center);
+        margin-top: 30px;
+    }
+    .website__text-wrapper{
+        width:500px;
+        height:400px;
+        @include flex(column, flex-start, center);
+        text-align: center;
+    }
+    .website__title{
+        font-size:$bigFontSize;
+        letter-spacing: $smallLetterSpacing + 0.03;
+    }
+    .website__text{
+        font-size:$normalFontSize;
+        letter-spacing: $smallLetterSpacing + 0.03;
+        width:100%;
+        line-height:2;
+    }
+    .website__image-wrapper{
+        width:550px;
+        height:380px;
+        @include flex(column, flex-start, flex-start);
+        border-top-style: solid;
+        border-top-width: 5px;
+        border-top-color: $accentDarkColor;
+        background-color: #D9D9D9;
+        background-image: url('../images/website_img.png');
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+    }
+}
+
+
+//Responsive from 767px to 576px
+@media  only screen and (max-width:767px){
+    .team{
+        width:100%;
+        height:unset;
+        @include flex(column, center, center);
+        margin-bottom: 30px;
+    }
+    .team__text-wrapper{
+        width:90%;
+        height:400px;
+        @include flex(column, flex-start, center);
+        text-align: center;
+    }
+    .team__title{
+        font-size:$bigFontSize;
+        letter-spacing: $smallLetterSpacing + 0.03;
+    }
+    .team__text{
+        font-size:$normalFontSize;
+        letter-spacing: $smallLetterSpacing + 0.03;
+        width:500px;
+        line-height:2;
+    }
+    .team__image-wrapper{
+        width:500px;
+        height:350px;
+        @include flex(column, flex-start, flex-start);
+        
+        background-image: url('../images/game_logo.png');
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+    }
+    
+    .website{
+        width:100%;
+        height:unset;
+        @include flex(column, space-evenly, center);
+        margin-top: 30px;
+    }
+    .website__text-wrapper{
+        width:90%;
+        height:400px;
+        @include flex(column, flex-start, center);
+        text-align: center;
+    }
+    .website__title{
+        font-size:$bigFontSize;
+        letter-spacing: $smallLetterSpacing + 0.03;
+    }
+    .website__text{
+        font-size:$normalFontSize;
+        letter-spacing: $smallLetterSpacing + 0.03;
+        width:500px;
+        line-height:2;
+    }
+    .website__image-wrapper{
+        width:500px;
+        height:350px;
+        @include flex(column, flex-start, flex-start);
+        border-top-style: solid;
+        border-top-width: 5px;
+        border-top-color: $accentDarkColor;
+        background-color: #D9D9D9;
+        background-image: url('../images/website_img.png');
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+    }
+}
+
+//Responsive to 575px 
+@media  only screen and (max-width:575px){
+    .team{
+        width:100%;
+        height:unset;
+        @include flex(column, center, center);
+        margin-bottom: 30px;
+    }
+    .team__text-wrapper{
+        width:90%;
+        height:340px;
+        @include flex(column, flex-start, center);
+        text-align: center;
+    }
+    .team__title{
+        font-size:$bigFontSize - 5;
+        letter-spacing: $smallLetterSpacing + 0.03;
+    }
+    .team__text{
+        font-size:$normalFontSize - 3;
+        letter-spacing: $smallLetterSpacing + 0.03;
+        width:90%;
+        line-height:2;
+    }
+    .team__image-wrapper{
+        width:90%;
+        height:300px;
+        @include flex(column, flex-start, flex-start);
+
+        background-image: url('../images/game_logo.png');
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+    }
+    
+    .website{
+        width:100%;
+        height:unset;
+        @include flex(column, space-evenly, center);
+        margin-top: 30px;
+    }
+    .website__text-wrapper{
+        width:90%;
+        height:340px;
+        @include flex(column, flex-start, center);
+        text-align: center;
+    }
+    .website__title{
+        font-size:$bigFontSize  - 5;
+        letter-spacing: $smallLetterSpacing + 0.03;
+    }
+    .website__text{
+        font-size:$normalFontSize  - 3;
+        letter-spacing: $smallLetterSpacing + 0.03;
+        width:500px;
+        line-height:2;
+    }
+    .website__image-wrapper{
+        width:90%;
+        height:300px;
+        @include flex(column, flex-start, flex-start);
+        border-top-style: solid;
+        border-top-width: 5px;
+        border-top-color: $accentDarkColor;
+        background-color: #D9D9D9;
+        background-image: url('../images/website_img.png');
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+    }
+}
